@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-RGDEVWSPNZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+  
+      gtag('config', 'G-RGDEVWSPNZ');
+    </script>
+  
+    
+    <meta name="samandehi" content="218522263">
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="enamad" content="198045">
+    <title>
+      Deep Learning
+    </title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .form-control {
+            dir: ltr;
+            white-space: pre-wrap;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+        }
+        .form-control::-webkit-input-placeholder {
+            text-align: start;
+        }
+    </style>
+    
+  
+    
+    
+    <link href="{% static './css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static './bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static './css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static './css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static './css/swiper-bundle.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static './css/index.css' %}">
+  
+    
+    <link href="{% static './css/style.css' %}" rel="stylesheet">
+    <link href="{% static './css/new.css' %}" rel="stylesheet">
+    <link href="{% static './css/customStyle.css' %}" rel="stylesheet">
+    <link href="{% static './css/megamenu.css' %}" rel="stylesheet">
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class=" row">
+            <div class="col-12 col-md-6 mx-auto mt-4">
+                <div class="card shadow py-4 px-37">
+                    <div class="card-body">
+                        <img class="justify-content-center d-flex mx-auto" src="{% static './img/icon.png' %}" width="280px" alt="" load="'lazy">
+                        <h2 class="py-3 text-center text-muted ">News Classification</h2>
+                        <p class="mb-4 text-center">
+                            {% comment %} <span class="badge bg-warning text-primary">لطفا عکس با وضوح مناسبی را اپلود کنید.</span> {% endcomment %}
+                        </p>
+
+                        <div class="container">
+                            <form method="GET" action="" enctype='multipart/form-data'>
+                                <textarea name="text" class="form-control text-left mb-3" style="height: 250px;">{{ news_text|default:"" }}</textarea>
+                                <button type="submit" class="btn btn-primary mx-auto d-flex w-100 text-center justify-content-center">Submit</button>
+                            </form>
+                        </div>
+
+                        
+                        <br>
+                        {% if category %}
+                            <hr class="border border-danger border-2 opacity-50">
+                            <div class="container py-3 mt-5 border border-info rounded">
+                                <p class="text-justify text-center">
+                                    {{ category }}
+                                </p>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="{% static '/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static '/js/swiper-bundle.min.js' %}"></script>
+    <script src="%{ static '/js/main.js' %}"></script>
+    <script src="{% static '/js/jquery.min.js' %}"></script>
+    <script src="{% static '/js/megamenu.js' %}"></script>
+</body>
